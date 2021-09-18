@@ -76,4 +76,9 @@ public class Candidate implements Comparable<Candidate>{
     public int hashCode() {
         return fio.hashCode();
     }
+
+    public int compareTo(Candidate p){
+
+        return fio.compareTo(p.getfio());
+    }
 }
