@@ -1,4 +1,4 @@
-public class Candidate implements Comparable<Candidate>{
+public class Candidate implements Comparable<Candidate> {
     private String fio;
     private String sex;
     private String age;
@@ -60,25 +60,7 @@ public class Candidate implements Comparable<Candidate>{
                 ", " + rating;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (obj == null || obj.getClass() != this.getClass()) {
-            return false;
-        }
-        Candidate other = (Candidate) obj;
-        return fio.equals(other.getfio());
-    }
-
-    @Override
-    public int hashCode() {
-        return fio.hashCode();
-    }
-
-    public int compareTo(Candidate p){
-
+    public int compareTo(Candidate p) {
         return fio.compareTo(p.getfio());
     }
 }
