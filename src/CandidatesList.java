@@ -1,6 +1,7 @@
 import java.util.Comparator;
 import java.util.List;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 public class CandidatesList {
     private TreeSet<Candidate> candidates = new TreeSet<>();
@@ -11,7 +12,7 @@ public class CandidatesList {
 
     public List<Candidate> getCandidates() {
         return candidates.stream().sorted(Comparator.comparing(Candidate::getRelevance, Comparator.reverseOrder())
-                .thenComparing(Candidate::getRating, Comparator.reverseOrder())).toList();
+                .thenComparing(Candidate::getRating, Comparator.reverseOrder())).collect(Collectors.toList());
     }
 
 }

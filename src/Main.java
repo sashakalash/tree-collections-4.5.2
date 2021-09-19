@@ -14,7 +14,7 @@ public class Main {
             System.out.println("Введите информацию о кандидате (для завершения введите пустую строку):\n" +
                     "  Фамилия Имя Отчество, пол, возраст, релевантность резюме, оценка на собеседовании:");
             String input = scanner.nextLine();
-            if (" ".equals(input)) {
+            if ("".equals(input)) {
                 break;
             }
             String[] splittedString = input.split(", ");
